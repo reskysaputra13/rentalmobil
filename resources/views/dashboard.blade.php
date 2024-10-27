@@ -1,5 +1,5 @@
 @extends('layouts.main')
-
+@section('title', 'Dashboard')
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -361,7 +361,8 @@
                                         <td>
                                             <div class="round-img">
                                                 <a href=""><img width="35"
-                                                        src="{{ asset('/images/avatar/1.png') }}" alt=""></a>
+                                                        src="{{ asset('assets/images/avatar/1.png') }}"
+                                                        alt=""></a>
                                             </div>
                                         </td>
                                         <td>Lew Shawon</td>

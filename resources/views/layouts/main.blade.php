@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Focus - Bootstrap Admin Dashboard </title>
+    <title>Rental Mobil - @yield('title') </title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/owl-carousel/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/owl-carousel/css/owl.theme.default.min.css') }}">
     <link href="{{ asset('assets/vendor/jqvmap/css/jqvmap.min.css') }}" rel="stylesheet">
@@ -42,7 +42,27 @@
         <!--**********************************
             Nav header start
         ***********************************-->
-        @include('layouts.navbar')
+        <div class="nav-header">
+            <a href="index.html" class="brand-logo">
+                <img class="logo-abbr" src="{{asset('assets/images/logo.png')}}" alt="">
+                <img class="logo-compact" src="{{asset('assets/images/logo-text.png')}}" alt="">
+                <img class="brand-title" src="{{asset('assets/images/logo-text.png')}}" alt="">
+            </a>
+
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Header start
+        ***********************************-->
+        @include('layouts.header')
         <!--**********************************
             Header end ti-comment-alt
         ***********************************-->
@@ -59,11 +79,13 @@
             Content body start
         ***********************************-->
         <div class="content-body">
+            <!-- row -->
             @yield('content')
         </div>
         <!--**********************************
             Content body end
         ***********************************-->
+
 
         <!--**********************************
             Footer start
@@ -80,6 +102,8 @@
         <!--**********************************
            Support ticket button end
         ***********************************-->
+
+
     </div>
     <!--**********************************
         Main wrapper end

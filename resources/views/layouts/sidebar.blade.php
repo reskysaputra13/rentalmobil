@@ -2,11 +2,11 @@
     <div class="quixnav-scroll">
         <ul class="metismenu" id="menu">
             <li class="nav-label first">Main Menu</li>
-            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                        class="icon icon-single-04"></i><span class="nav-text">Dashboard</span></a>
+            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-single-04"></i><span
+                        class="nav-text">Dashboard</span></a>
                 <ul aria-expanded="false">
-                    <li><a href="./index.html">Dashboard 1</a></li>
-                    <li><a href="./index2.html">Dashboard 2</a></li>
+                    <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                    {{-- <li><a href="./index2.html">Dashboard 2</a></li> --}}
                 </ul>
             </li>
             <li class="nav-label">Apps</li>
@@ -60,8 +60,8 @@
                 </ul>
             </li>
 
-            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                        class="icon icon-plug"></i><span class="nav-text">Plugins</span></a>
+            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-plug"></i><span
+                        class="nav-text">Plugins</span></a>
                 <ul aria-expanded="false">
                     <li><a href="./uc-select2.html">Select 2</a></li>
                     <li><a href="./uc-nestable.html">Nestedable</a></li>
@@ -74,8 +74,8 @@
             <li><a href="widget-basic.html" aria-expanded="false"><i class="icon icon-globe-2"></i><span
                         class="nav-text">Widget</span></a></li>
             <li class="nav-label">Forms</li>
-            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                        class="icon icon-form"></i><span class="nav-text">Forms</span></a>
+            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="icon icon-form"></i><span
+                        class="nav-text">Forms</span></a>
                 <ul aria-expanded="false">
                     <li><a href="./form-element.html">Form Elements</a></li>
                     <li><a href="./form-wizard.html">Wizard</a></li>
