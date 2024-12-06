@@ -85,11 +85,11 @@
                             <i class="mdi mdi-account"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            {{-- <a href="./app-profile.html" class="dropdown-item">
+                            <a href="{{route('users.profile', auth()->user()->id)}}" class="dropdown-item">
                                 <i class="icon-user"></i>
                                 <span class="ml-2">Profile </span>
                             </a>
-                            <a href="./email-inbox.html" class="dropdown-item">
+                            {{-- <a href="./email-inbox.html" class="dropdown-item">
                                 <i class="icon-envelope-open"></i>
                                 <span class="ml-2">Inbox </span>
                             </a> --}}

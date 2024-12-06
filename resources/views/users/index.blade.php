@@ -31,6 +31,8 @@
                                     <tr>
                                         <th>No.</th>
                                         <th>Username</th>
+                                        <th>Roles</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -38,6 +40,17 @@
                                         <tr>
                                             <td>{{$loop->iteration}}</td>
                                             <td>{{$user->username}}</td>
+                                            <td>
+                                                <ul>
+                                                    @foreach ($user->roles as $item)
+                                                    <li>{{$item->nama_role}}</li>
+                                                    @endforeach
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <a href="{{route('users.profile', $user->id)}}"
+                                                    class="btn btn-warning">Edit</a>
+                                            </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -45,6 +58,8 @@
                                     <tr>
                                         <th>No.</th>
                                         <th>Username</th>
+                                        <th>Role</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </tfoot>
                             </table>

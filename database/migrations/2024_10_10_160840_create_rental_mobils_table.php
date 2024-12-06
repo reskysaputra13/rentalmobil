@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nama_rental');
             $table->longText('deskripsi');
             $table->string('alamat');
+            $table->string('no_hp');
             $table->string('foto');
 
             $table->timestamps();

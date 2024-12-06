@@ -22,14 +22,21 @@
                             <div class="col-xl-12">
                                 <div class="auth-form">
                                     <h4 class="text-center mb-4">Sign up your account</h4>
-                                    <form action="index.html">
+                                    <form action="{{route('auth.register')}}" method="post">
+                                        @csrf
                                         <div class="form-group">
                                             <label><strong>Username</strong></label>
-                                            <input type="text" class="form-control" placeholder="username">
+                                            <input type="text" class="form-control" name="username"
+                                            placeholder="username" required>
                                         </div>
                                         <div class="form-group">
-                                            <label><strong>Email</strong></label>
-                                            <input type="email" class="form-control" placeholder="hello@example.com">
+                                            <label><strong>Role</strong></label>
+                                            <select name="role_id" id="role" class="form-control">
+                                            <option value="">Pilih Role!</option>
+                                            @foreach ($roles as $item)
+                                            <option value="{{$item->id}}">{{$item->nama_role}}</option>
+                                            @endforeach
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label><strong>Password</strong></label>

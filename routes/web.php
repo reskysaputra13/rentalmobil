@@ -45,7 +45,7 @@ Route::prefix('auth')->group(function () {
 |--------------------------------------------------------------------------
 */
 
-Route::middleware('auth')->group(function () {
+Route::middleware('auth', 'checkUserDetail')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
     /*
@@ -55,7 +55,9 @@ Route::middleware('auth')->group(function () {
     */
 
     Route::prefix('users')->group(function () {
-        Route::get('index', [UserController::class, 'index'])->name('users.index');
+        Route::get('index', [UserController::class, 'index'])->name('users.index')->middleware('checkRole:SAD');
+        Route::get('profile/{id}', [UserController::class, 'profile'])->name('users.profile');
+        Route::put('profile/{id}', [UserController::class, 'update'])->name('users.profile');
     });
 
     /*

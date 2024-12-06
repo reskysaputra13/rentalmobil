@@ -1,3 +1,11 @@
+@php
+    $rolesUser = [];
+
+    foreach (auth()->user()->roles as $item) {
+        array_push($rolesUser, $item->kode_role);
+    }
+@endphp
+
 <div class="quixnav">
     <div class="quixnav-scroll">
         <ul class="metismenu" id="menu">
@@ -9,8 +17,10 @@
                     {{-- <li><a href="./index2.html">Dashboard 2</a></li> --}}
                 </ul>
             </li>
+            @if (in_array('SAD', $rolesUser))
             <li><a href="{{ route('users.index') }}" aria-expanded="false"><i class="icon icon-single-04"></i><span
                         class="nav-text">Users</span></a></li>
+            @endif
 
             {{-- <li class="nav-label">Apps</li>
             <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
